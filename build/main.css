@@ -1,0 +1,56 @@
+.bolsa-vazada {
+  color: transparent;
+  -webkit-text-stroke: 1.5px #ffffff;
+}
+
+#carouselExample .carousel-item img {
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: black;
+  color: #fff;
+}
+header .container {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container .container-pesquisa-e-favoritos {
+  gap: 15px;
+  font-size: 20px;
+}
+
+main .nome-da-loja {
+  display: flex;
+  justify-content: center;
+  background-image: url("../pexels-elijahsad-3473569.jpg");
+  background-size: cover;
+}
+main .nome-da-loja .container-do-nome {
+  padding: 10px;
+  font-size: 10px;
+  background-color: rgba(255, 255, 255, 0.8549019608);
+  color: #9b8009;
+  background-image: url("../Gemini_Generated_Image_3w6ad93w6ad93w6a(1).png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 70%;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}/*# sourceMappingURL=main.css.map */
