@@ -119,7 +119,7 @@ main{
     .menu-ativo{
         display: block;
         transform: translateX(0%);
-}
+    }
     #imagens-principais-catalogo{
         img{
                 width: 100%;
@@ -181,5 +181,28 @@ main{
     }
     .produtos-carousel .slick-list {
         margin: 0 -10px; // Compensa o espaçamento para alinhar nas bordas
+    }
+    .menu-vertical{
+        transition: all 0.5s ease-in-out;
+        display: none;
+        background-color: black;
+        position: absolute;
+        top:0;
+        height: 100vh;
+        z-index: 100;
+        width: 100%;
+        transform: translateY(120%);
+        h2{
+            font-family: "EB Garamond", serif;
+                font-optical-sizing: auto;
+                font-weight: weight;
+                font-style: normal;
+                font-size: 20px;
+                text-transform: uppercase;
+        }
+    }
+    .menu-vertical-ativo{
+        display: block;
+        transform: translateY(0);
     }
 }
