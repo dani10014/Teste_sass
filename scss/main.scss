@@ -20,6 +20,9 @@ header{
         }
     }
 }
+body{
+    background-color: rgba(168, 168, 168, 0.5);
+}
 main{
     .nome-da-loja{
         display: flex;
@@ -43,6 +46,128 @@ main{
             font-optical-sizing: auto;
             font-weight: weight;
             font-style: normal;
+        }
+    }
+    .menu-lateral{
+        display: none;
+        background-color:#fff;
+        position: fixed;
+        top: 60px;
+        width: 100%;
+        height: 100%;
+        z-index: 20;
+        transform:translateX(-100%) ;
+        transition: all 0.5s ease-in-out;
+        .text-menu-top{
+            padding: 10px;
+            text-transform: uppercase;
+            h1{
+                font-family: "EB Garamond", serif;
+                font-optical-sizing: auto;
+                font-weight: weight;
+                font-style: normal;
+                font-size: 2rem;
+            }
+        .btn-close{
+            position: absolute;
+            right: 10px;
+        }
+        }
+        .conteudo-principal-menu-botoes{
+            button{
+                font-size: 27px;
+                background: none;
+                border: none;
+                text-align: start;
+                font-family: "EB Garamond", serif;
+                font-optical-sizing: auto;
+                font-weight: weight;
+                font-style: normal;
+                margin-left: 10px;
+                text-transform: uppercase;
+            }
+        }
+        .menu-footer{
+            position: absolute;
+            top: 830px;
+            width: 100%;
+            height: 30px;
+            button{
+                width: 100%;
+                bottom: 0;
+                width: 100%;
+                background: none;
+                border: none;
+                border-right: 1px solid black;
+                font-family: "EB Garamond", serif;
+                font-optical-sizing: auto;
+                font-weight: weight;
+                font-style: normal;
+                font-size: 20px;
+                text-transform: uppercase;
+                }
+            .botao-shop-all{
+                border-right: none;
+            }
+        }
+    }
+    .menu-ativo{
+        display: block;
+        transform: translateX(-2.7%);
+}
+    #imagens-principais-catalogo{
+        img{
+                width: 100%;
+                height: 150px;
+                object-fit: cover
+            }
+        .texto-the-coletion{
+            h2{
+                text-transform: uppercase;
+                font-size: 2rem;
+                font-family: "EB Garamond", serif;
+                font-optical-sizing: auto;
+                font-weight: weight;
+                font-style: normal;
+            }
+            button{
+                background:none;
+                border: none;
+                text-transform: uppercase;
+                margin-right: 10px;
+                
+            }
+        }
+    }
+    #secao-artefatos-roupas{
+        .texto-principais-produtos{
+            display: flex;
+            justify-content: center;
+        
+            h2{
+                text-transform: uppercase;
+                font-size: 1rem;
+                border-bottom: 2px solid #00000062;
+            }
+        }
+        .produtos{
+            margin-bottom: 40px;
+            img{
+            width: 100%;
+            height: 130px;
+            margin-bottom: 10px;
+            object-fit: cover;
+        }
+            .botao-inspecionar{
+                display: flex;
+                justify-content: space-between;
+                button{
+                    font-size: 12px;
+                }
+                i{
+                    font-size: 10px;
+                }
+            }
         }
     }
 }
