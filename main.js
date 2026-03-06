@@ -20,12 +20,19 @@ btnFecharMenu.addEventListener("click",function(){
 
 botoesInspecionar.forEach(botao =>{
     botao.addEventListener("click",function(){
-        menuVertical.style.display = "block";
+        const colunaProduto = botao.closest(".produto");
 
+        let dados = {
+            img: colunaProduto.querySelector("img").src,
+            nomeProduto : colunaProduto.querySelector("h6").innerText,
+            valor : colunaProduto.querySelector("strong").innerText,
+        }
+        menuVertical
+        
+        menuVertical.style.display = "block";
         setTimeout(function(){
         menuVertical.classList.add("menu-vertical-ativo");
         },100)
-
     })
 })
 botaoVoltar.addEventListener("click",function(){
@@ -57,5 +64,20 @@ $(document).ready(function(){
                 return 'Echo Moda - Coleção Exclusiva';
             }
         }
-});
+    });
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.slider-nav'
+      });
+      $('.slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        dots: true,
+        centerMode: true,
+        focusOnSelect: true
+      });
 });
