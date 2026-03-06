@@ -4,7 +4,10 @@ const btnFecharMenu = document.querySelector(".btn-close");
 
 
 btnMenuAmburguer.addEventListener("click",function(){
-    menuLateral.classList.add("menu-ativo");
+    menuLateral.style.display = "block"
+    setTimeout(function(){
+        menuLateral.classList.add("menu-ativo");
+    },100)
     
 })
 btnFecharMenu.addEventListener("click",function(){
