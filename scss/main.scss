@@ -118,7 +118,7 @@ main{
     }
     .menu-ativo{
         display: block;
-        transform: translateX(-2.7%);
+        transform: translateX(0%);
 }
     #imagens-principais-catalogo{
         img{
@@ -175,5 +175,11 @@ main{
                 }
             }
         }
+    }
+    .produtos-carousel .slick-slide {
+        margin: 0 10px; // Adiciona um espaçamento horizontal entre os slides
+    }
+    .produtos-carousel .slick-list {
+        margin: 0 -10px; // Compensa o espaçamento para alinhar nas bordas
     }
 }

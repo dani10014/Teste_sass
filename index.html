@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
     <link rel="stylesheet" href="build/main.css">
     <title>EchoModa</title>
 </head>
@@ -77,15 +80,21 @@
         </section>
         <section id="imagens-principais-catalogo" class="mt-4">
             <div class="container">
-                <div class="row">
+                <div class="row" id="imagens-principais-carrosel">
                     <div class="col-4">
-                        <img src="./pexels-cottonbro-10037708.jpg">
+                        <a href="./pexels-cottonbro-10037708.jpg" class="popup-link">
+                            <img src="./pexels-cottonbro-10037708.jpg">
+                        </a>
                     </div>
                     <div class="col-4">
-                        <img src="./pexels-eduardo-romero-817034-1750776.jpg">
+                        <a href="./pexels-eduardo-romero-817034-1750776.jpg" class="popup-link">
+                            <img src="./pexels-eduardo-romero-817034-1750776.jpg">
+                        </a>
                     </div>
                     <div class="col-4">
-                        <img src="./pexels-cottonbro-10037708.jpg">
+                        <a href="./pexels-cottonbro-10037708.jpg" class="popup-link">
+                            <img src="./pexels-cottonbro-10037708.jpg">
+                        </a>
                     </div> 
                 </div>
                 <div class="texto-the-coletion">
@@ -104,58 +113,46 @@
                 <div class="texto-principais-produtos">
                     <h2 class="text-center mb-4">Principais produtos</h2>
                 </div>
-                <div id="carouselprodutos" class="carousel slide">
-                <div class="carousel-indicators" id="indicadores-de-slide">
-                    <button type="button" data-bs-target="#carouselprodutos" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselprodutos" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row produtos mt-2 flex-nowrap">
-                            <div class="col-5">
-                                <img src="./pexels-godisable-jacob-226636-932401.jpg" class="w-100">
-                                <h6 class="text-center mt-2">Bolsa couro - limitada</h6>
-                                <strong><p class="text-center">R$ 186,00</p></strong>
-                                <div class="botao-inspecionar d-flex justify-content-center gap-2 mb-3">
-                                    <button class="btn btn-dark btn-sm">Inspecionar <i class="fa-solid fa-eye"></i></button>
-                                    <button class="btn btn-dark btn-sm"><i class="fa-regular fa-heart"></i></button>
-                                </div>
-                            </div>
-                            <div class="col-5">
-                                <img src="./pexels-godisable-jacob-226636-932401.jpg" class="w-100">
-                                <h6 class="text-center mt-2">Bolsa couro - limitada</h6>
-                                <strong><p class="text-center">R$ 186,00</p></strong>
-                                <div class="botao-inspecionar d-flex justify-content-center gap-2 mb-3">
-                                    <button class="btn btn-dark btn-sm">Inspecionar <i class="fa-solid fa-eye"></i></button>
-                                    <button class="btn btn-dark btn-sm"><i class="fa-regular fa-heart"></i></button>
-                                </div>
-                            </div>
-                            <div class="col-5">
-                                <img src="./pexels-godisable-jacob-226636-932401.jpg" class="w-100">
-                                <h6 class="text-center mt-2">Bolsa couro - limitada</h6>
-                                <strong><p class="text-center">R$ 186,00</p></strong>
-                                <div class="botao-inspecionar d-flex justify-content-center gap-2 mb-3">
-                                    <button class="btn btn-dark btn-sm">Inspecionar <i class="fa-solid fa-eye"></i></button>
-                                    <button class="btn btn-dark btn-sm"><i class="fa-regular fa-heart"></i></button>
-                                </div>
-                            </div>
+                <div id="carouselprodutos" class="produtos-carousel">
+                    <div>
+                        <img src="./pexels-godisable-jacob-226636-932401.jpg" class="w-100">
+                        <h6 class="text-center mt-2">Bolsa couro - limitada</h6>
+                        <strong><p class="text-center">R$ 186,00</p></strong>
+                        <div class="botao-inspecionar d-flex justify-content-center gap-2 mb-3">
+                            <button class="btn btn-dark btn-sm">Inspecionar <i class="fa-solid fa-eye"></i></button>
+                            <button class="btn btn-dark btn-sm"><i class="fa-regular fa-heart"></i></button>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="row produtos mt-2 flex-nowrap">
-                            <div class="col-5">
-                                <img src="./pexels-godisable-jacob-226636-932401.jpg" class="w-100">
-                                <h6 class="text-center mt-2">Outro Produto</h6>
-                                <strong><p class="text-center">R$ 199,00</p></strong>
-                                <div class="botao-inspecionar d-flex justify-content-center gap-2 mb-3">
-                                    <button class="btn btn-dark btn-sm">Inspecionar <i class="fa-solid fa-eye"></i></button>
-                                    <button class="btn btn-dark btn-sm"><i class="fa-regular fa-heart"></i></button>
-                                </div>
-                            </div>
+                    <div>
+                        <img src="./pexels-godisable-jacob-226636-932401.jpg" class="w-100">
+                        <h6 class="text-center mt-2">Bolsa couro - limitada</h6>
+                        <strong><p class="text-center">R$ 186,00</p></strong>
+                        <div class="botao-inspecionar d-flex justify-content-center gap-2 mb-3">
+                            <button class="btn btn-dark btn-sm">Inspecionar <i class="fa-solid fa-eye"></i></button>
+                            <button class="btn btn-dark btn-sm"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="./pexels-godisable-jacob-226636-932401.jpg" class="w-100">
+                        <h6 class="text-center mt-2">Bolsa couro - limitada</h6>
+                        <strong><p class="text-center">R$ 186,00</p></strong>
+                        <div class="botao-inspecionar d-flex justify-content-center gap-2 mb-3">
+                            <button class="btn btn-dark btn-sm">Inspecionar <i class="fa-solid fa-eye"></i></button>
+                            <button class="btn btn-dark btn-sm"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="./pexels-godisable-jacob-226636-932401.jpg" class="w-100">
+                        <h6 class="text-center mt-2">Bolsa couro - limitada</h6>
+                        <strong><p class="text-center">R$ 186,00</p></strong>
+                        <div class="botao-inspecionar d-flex justify-content-center gap-2 mb-3">
+                            <button class="btn btn-dark btn-sm">Inspecionar <i class="fa-solid fa-eye"></i></button>
+                            <button class="btn btn-dark btn-sm"><i class="fa-regular fa-heart"></i></button>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
         <div class="menu-lateral">
             <div class="text-menu-top d-flex align-items-center justify-content-center">
                 <h1 class="mb-0">Echo Moda</h1>
@@ -179,7 +176,11 @@
             </div>
         </div>
     </main>
-    <script src="./main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./main.js"></script>
+    
 </body>
 </html>

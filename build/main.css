@@ -126,7 +126,7 @@ main .menu-lateral .menu-footer .botao-shop-all {
 }
 main .menu-ativo {
   display: block;
-  transform: translateX(-2.7%);
+  transform: translateX(0%);
 }
 main #imagens-principais-catalogo img {
   width: 100%;
@@ -177,4 +177,10 @@ main #secao-artefatos-roupas .produtos .botao-inspecionar button {
 }
 main #secao-artefatos-roupas .produtos .botao-inspecionar i {
   font-size: 10px;
+}
+main .produtos-carousel .slick-slide {
+  margin: 0 10px;
+}
+main .produtos-carousel .slick-list {
+  margin: 0 -10px;
 }/*# sourceMappingURL=main.css.map */

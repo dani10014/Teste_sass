@@ -13,3 +13,28 @@ btnMenuAmburguer.addEventListener("click",function(){
 btnFecharMenu.addEventListener("click",function(){
     menuLateral.classList.remove("menu-ativo");
 })
+
+// Inicializa o carrossel de produtos com Slick
+$(document).ready(function(){
+    $('#carouselprodutos').slick({
+        slidesToShow: 2.5,
+        slidesToScroll: 1,
+        infinite: false, 
+        arrows: false,
+        dots: false,
+    });
+    $('.popup-link').magnificPopup({
+        type: 'image',
+        mainClass: 'mfp-with-zoom',
+        zoom: {
+            enabled: true,
+            duration: 300
+        },
+        image: {
+            verticalFit: true,
+            titleSrc: function(item) {
+                return 'Echo Moda - Coleção Exclusiva';
+            }
+        }
+});
+});
