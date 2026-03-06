@@ -159,6 +159,7 @@ main #secao-artefatos-roupas .texto-principais-produtos h2 {
 }
 main #secao-artefatos-roupas .produtos {
   margin-bottom: 40px;
+  touch-action: pan-y;
 }
 main #secao-artefatos-roupas .produtos img {
   width: 100%;

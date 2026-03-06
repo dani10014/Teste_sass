@@ -157,6 +157,7 @@ main{
         }
         .produtos{
             margin-bottom: 40px;
+            touch-action: pan-y;
             img{
             width: 100%;
             height: 130px;
