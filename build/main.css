@@ -21,7 +21,7 @@
   letter-spacing: 2px;
   font-size: 0.8rem;
   position: fixed;
-  top: 50px;
+  top: 60px;
 }
 .faixa-alerta .texto-infinito {
   display: inline-block;
@@ -67,7 +67,7 @@ header .container .container-pesquisa-e-favoritos {
 
 body {
   background-color: rgba(190, 176, 176, 0.5);
-  margin-top: 89px;
+  margin-top: 98px;
 }
 
 main .nome-da-loja {
@@ -94,11 +94,14 @@ main .nome-da-loja .container-do-nome {
   font-weight: weight;
   font-style: normal;
 }
+main .carrosel-principal-site img {
+  filter: brightness(0.7);
+}
 main .menu-lateral {
   display: none;
   background-color: #fff;
   position: fixed;
-  top: 60px;
+  top: 50px;
   width: 100%;
   height: 100%;
   z-index: 20;
@@ -135,7 +138,7 @@ main .menu-lateral .conteudo-principal-menu-botoes button {
 }
 main .menu-lateral .menu-footer {
   position: absolute;
-  top: 830px;
+  bottom: 90px;
   width: 100%;
   height: 30px;
 }
@@ -189,7 +192,6 @@ main #imagens-principais-catalogo .texto-the-coletion button {
   margin-right: 10px;
 }
 main #secao-artefatos-roupas .texto-principais-produtos {
-  display: flex;
   justify-content: center;
 }
 main #secao-artefatos-roupas .texto-principais-produtos h2 {
@@ -197,14 +199,27 @@ main #secao-artefatos-roupas .texto-principais-produtos h2 {
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
-  font-size: 20px;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1.3rem;
+  color: #9b8009;
   border-bottom: 2px solid rgba(0, 0, 0, 0.3843137255);
+}
+main #secao-artefatos-roupas .texto-principais-produtos button {
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 0.8rem;
 }
 main #secao-artefatos-roupas #carouselprodutos {
   margin-bottom: 40px;
   touch-action: pan-y;
+}
+main #secao-artefatos-roupas #carouselprodutos .produto {
+  max-height: 300px;
 }
 main #secao-artefatos-roupas #carouselprodutos img {
   width: 100%;
@@ -216,6 +231,11 @@ main #secao-artefatos-roupas #carouselprodutos .botao-inspecionar button {
   font-size: 0.8rem;
   padding: 0.2rem 0.4rem;
   height: 45px;
+  text-transform: uppercase;
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 main #secao-artefatos-roupas #carouselprodutos .botao-inspecionar i {
   font-size: 10px;
@@ -245,6 +265,9 @@ main .menu-vertical h2 {
   font-size: 20px;
   text-transform: uppercase;
   color: #9b8009;
+}
+main .menu-vertical .cabecalho-menu-vertical {
+  height: 80px;
 }
 main .menu-vertical .imagem-do-produto .slider-for {
   margin-bottom: 10px;
@@ -278,6 +301,8 @@ main .menu-vertical .menu-vertical-corpo {
   background-color: #ffffff;
   padding-top: 20px;
   height: 100vh;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 main .menu-vertical .menu-vertical-corpo h3 {
   font-family: "EB Garamond", serif;
@@ -287,14 +312,17 @@ main .menu-vertical .menu-vertical-corpo h3 {
   font-size: 20px;
   text-transform: uppercase;
   text-align: center;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.274);
 }
 main .menu-vertical .menu-vertical-corpo p {
   text-transform: uppercase;
   font-size: 0.9rem;
 }
-main .menu-vertical .menu-vertical-corpo button {
+main .menu-vertical .menu-vertical-corpo .botao-adicionar-carrinho {
   width: 100%;
+  height: 70px;
   margin-bottom: 10px;
+  text-transform: uppercase;
 }
 main .menu-vertical-ativo {
   display: block;

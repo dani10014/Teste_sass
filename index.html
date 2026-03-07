@@ -36,7 +36,7 @@
             </div>
         </div>
         <section>
-            <div id="carouselExample" class="carousel slide">
+            <div id="carouselExample" class="carousel slide carrosel-principal-site">
                 <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -110,8 +110,15 @@
         </section>
         <section id="secao-artefatos-roupas" class="mt-5">
             <div class="container">
-                <div class="texto-principais-produtos">
-                    <h2 class="text-center mb-4">Principais produtos</h2>
+                <div class="texto-principais-produtos mb-4 d-flex align-items-center justify-content-between">
+                    <h2 class="text-center mb-0">Principais produtos</h2>
+                        <button>
+                            <strong>
+                                Ver tudo
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </strong>
+                        </button>
+                        
                 </div>
                 <div id="carouselprodutos" class="produtos-carousel">
                     <div class="produto">
@@ -119,17 +126,15 @@
                         <h6 class="text-center mt-2">Bolsa couro - limitada</h6>
                         <strong><p class="text-center">R$ 226,00</p></strong>
                         <div class="botao-inspecionar d-flex justify-content-center gap-2 mb-3">
-                            <button class="btn btn-dark btn-sm">Inspecionar <i class="fa-solid fa-eye"></i></button>
-                            <button class="btn btn-dark btn-sm"><i class="fa-regular fa-heart"></i></button>
+                            <button class="btn btn-dark btn-sm">Inspecionar</button>
                         </div>
                     </div>
                     <div class="produto">
                         <img src="./pexels-godisable-jacob-226636-932401.jpg" class="w-100">
-                        <h6 class="text-center mt-2">Bolsa couro - limitada</h6>
+                        <h6 class="text-center mt-2">Bota couro - limitada</h6>
                         <strong><p class="text-center">R$ 319,20</p></strong>
                         <div class="botao-inspecionar d-flex justify-content-center gap-2 mb-3">
-                            <button class="btn btn-dark btn-sm">Inspecionar <i class="fa-solid fa-eye"></i></button>
-                            <button class="btn btn-dark btn-sm"><i class="fa-regular fa-heart"></i></button>
+                            <button class="btn btn-dark btn-sm">Inspecionar</button>
                         </div>
                     </div>
                     <div class="produto">
@@ -137,8 +142,7 @@
                         <h6 class="text-center mt-2">Bolsa couro - limitada</h6>
                         <strong><p class="text-center">R$ 186,00</p></strong>
                         <div class="botao-inspecionar d-flex justify-content-center gap-2 mb-3">
-                            <button class="btn btn-dark btn-sm">Inspecionar <i class="fa-solid fa-eye"></i></button>
-                            <button class="btn btn-dark btn-sm"><i class="fa-regular fa-heart"></i></button>
+                            <button class="btn btn-dark btn-sm">Inspecionar</button>
                         </div>
                     </div>
                     <div class="produto">
@@ -146,8 +150,7 @@
                         <h6 class="text-center mt-2">Bolsa couro - limitada</h6>
                         <strong><p class="text-center">R$ 186,00</p></strong>
                         <div class="botao-inspecionar d-flex justify-content-center gap-2 mb-3">
-                            <button class="btn btn-dark btn-sm">Inspecionar <i class="fa-solid fa-eye"></i></button>
-                            <button class="btn btn-dark btn-sm"><i class="fa-regular fa-heart"></i></button>
+                            <button class="btn btn-dark btn-sm">Inspecionar</button>
                         </div>
                     </div>
                 </div>
@@ -197,16 +200,20 @@
                 <div class="menu-vertical-corpo">
                     <div class="container">
                         <h3 class="mb-3 mt-3">Nome do produto</h3>
-                        <button class="btn btn-dark">+ Adicionar ao carrinho</button>
+                        <h4 class="text-center mb-3">R$ 00,00</h4>
+                        <button class="btn btn-dark botao-adicionar-carrinho">+ Adicionar ao carrinho</button>
                     <div class="container-favoritos-e-detalhes d-flex d-flex justify-content-between">
                         <div class="botao-adicionar-favoritos d-flex justify-content-center align-items-center gap-2">
-                            <i class="fa-regular fa-heart ps-2"></i>
-                            <p class="mb-0 ps-1">Adicionar ao favoritos</p>
+                            <i class="fa-regular fa-heart"></i>
+                            <p class="mb-0">Adicionar ao favoritos</p>
                         </div>
                         <div class="botao-adicionar-favoritos d-flex justify-content-center align-items-center gap-2">
-                            <i class="fa-solid fa-eye ps-3"></i>
-                            <p class="mb-0 ps-1">Detalhes</p>
+                            <i class="fas fa-info-circle"></i>
+                            <p class="mb-0">Detalhes</p>
                         </div>
+                    </div>
+                    <div class="detalhes">
+                        <h3>Detalhes do produto</h3>
                     </div>
                     </div>
                 </div>
