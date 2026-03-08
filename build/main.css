@@ -256,6 +256,7 @@ main .menu-vertical {
   z-index: 100;
   width: 100%;
   transform: translateY(120%);
+  overflow-y: auto;
 }
 main .menu-vertical h2 {
   font-family: "EB Garamond", serif;
@@ -300,7 +301,6 @@ main .menu-vertical .imagem-do-produto .slider-nav .slick-dots li button:before 
 main .menu-vertical .menu-vertical-corpo {
   background-color: #ffffff;
   padding-top: 20px;
-  height: 100vh;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -323,6 +323,23 @@ main .menu-vertical .menu-vertical-corpo .botao-adicionar-carrinho {
   height: 70px;
   margin-bottom: 10px;
   text-transform: uppercase;
+}
+main .menu-vertical .menu-vertical-corpo .detalhes h1 {
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 17px;
+  border-bottom: none;
+}
+main .menu-vertical .menu-vertical-corpo .detalhes p {
+  margin-bottom: 0;
+}
+main .menu-vertical .menu-vertical-corpo .detalhes .imagens-de-cuidado img {
+  width: 100%;
+  height: 70px;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
 }
 main .menu-vertical-ativo {
   display: block;
