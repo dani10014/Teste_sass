@@ -239,14 +239,18 @@ main{
         }
         .cabecalho-menu-vertical{
             height: 80px;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            z-index: 300;
         }
         .imagem-do-produto{
             .slider-for {
                 margin-bottom: 10px;
                 img {
-                    margin-top: 30px;
                     object-fit:cover;
                     width: 100%;
+                    margin-top: 120px;
                     height: 300px;
                 }
             }
