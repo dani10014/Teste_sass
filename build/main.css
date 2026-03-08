@@ -348,6 +348,10 @@ main .menu-vertical .menu-vertical-corpo .detalhes .guia-de-uso .imagens-de-cuid
   -o-object-fit: scale-down;
      object-fit: scale-down;
 }
+main .menu-vertical .menu-vertical-corpo .botao-favorito-ativo {
+  transform: translateY(20%);
+  color: red;
+}
 main .menu-vertical.menu-vertical-ativo {
   display: block;
   transform: translateY(0);

@@ -212,10 +212,10 @@ main{
         }
     }
     .produtos-carousel .slick-slide {
-        margin: 0 10px; // Adiciona um espaçamento horizontal entre os slides
+        margin: 0 10px;
     }
     .produtos-carousel .slick-list {
-        margin: 0 -10px; // Compensa o espaçamento para alinhar nas bordas
+        margin: 0 -10px;
     }
     .menu-vertical{
         transition: all 0.5s ease-in-out;
@@ -323,6 +323,10 @@ main{
                     }
                 }
             }
+        }
+        .botao-favorito-ativo{
+                    transform: translateY(20%);
+                    color: red;
                 }
             
         

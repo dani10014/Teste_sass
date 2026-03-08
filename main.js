@@ -3,6 +3,7 @@ const menuLateral = document.querySelector(".menu-lateral");
 const menuVertical = document.querySelector(".menu-vertical");
 const btnFecharMenu = document.querySelector(".btn-close");
 const botoesInspecionar = document.querySelectorAll(".botao-inspecionar button");
+const botaofavorito = null;
 
 
 btnMenuAmburguer.addEventListener("click",function(){
@@ -20,7 +21,6 @@ btnFecharMenu.addEventListener("click",function(){
 
 botoesInspecionar.forEach(botao =>{
     botao.addEventListener("click",function(){
-        // Encontra o card do produto clicado
         const colunaProduto = botao.closest(".produto");
 
         const detalhesElement = colunaProduto.querySelector(".detalhes-produto");
@@ -30,14 +30,11 @@ botoesInspecionar.forEach(botao =>{
             img: colunaProduto.querySelector("img").src,
             detalhes: detalhesElement ? detalhesElement.innerHTML : "",
         }
-        
 
-        // Seleciona os elementos dentro do menu vertical que serão atualizados
         const corpoMenuVertical = menuVertical.querySelector('.menu-vertical-corpo');
         const sliderFor = menuVertical.querySelector('.slider-for');
         const sliderNav = menuVertical.querySelector('.slider-nav');
 
-        // Destrói as instâncias anteriores do Slick para evitar conflitos
         if ($(sliderFor).hasClass('slick-initialized')) {
             $(sliderFor).slick('unslick');
         }
@@ -80,15 +77,13 @@ botoesInspecionar.forEach(botao =>{
             </div>` : ''}
         </div>`;
 
-        // Exibe o menu vertical e trava o scroll do corpo da página
         menuVertical.style.display = "block";
         document.body.style.overflow = 'hidden';
 
-        // Inicializa o Slick nos sliders que acabaram de ser populados
+
         $('.slider-for').slick({ slidesToShow: 1, slidesToScroll: 1, arrows: false, fade: true, asNavFor: '.slider-nav' });
         $('.slider-nav').slick({ slidesToShow: 3, slidesToScroll: 1, asNavFor: '.slider-for', dots: true, centerMode: true, focusOnSelect: true });
 
-        // Adiciona a classe para a animação de entrada
         setTimeout(function(){
             menuVertical.classList.add("menu-vertical-ativo");
             document.querySelector(".faixa-alerta").style.top = "80px"
@@ -96,7 +91,6 @@ botoesInspecionar.forEach(botao =>{
     })
 })
 
-// Usa delegação de eventos para o botão de voltar, pois ele é recriado dinamicamente
 menuVertical.addEventListener("click", function(e) {
     if (e.target.classList.contains("botao-voltar")) {
         menuVertical.classList.remove("menu-vertical-ativo");
@@ -104,10 +98,32 @@ menuVertical.addEventListener("click", function(e) {
         setTimeout(function(){
             menuVertical.style.display = "none";
             document.querySelector(".faixa-alerta").style.top = "60px"
-        }, 500) // Aumenta o tempo para a animação de saída concluir
+        }, 500)
     }
 });
+menuVertical.addEventListener("click", function(event) {
+    
+    const btnFavorito = event.target.closest(".botao-adicionar-favoritos");
 
+    if (btnFavorito) {
+        const icone = btnFavorito.querySelector("i");
+        const texto = btnFavorito.querySelector("p");
+
+        icone.classList.toggle("fa-solid");
+        icone.classList.toggle("fa-regular");
+
+
+            if (icone.classList.contains("fa-solid")) {
+            icone.style.color = "red";
+            texto.innerText = "Remover dos favoritos";
+            console.log("Adicionado!");
+            }else{
+            icone.style.color = "";
+            texto.innerText = "Adicionar aos favoritos";
+            console.log("Removido!");
+        }
+    }
+}); 
 $(document).ready(function(){
     $('#carouselprodutos').slick({
         slidesToShow: 2.5,
