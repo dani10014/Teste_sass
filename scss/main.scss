@@ -239,7 +239,7 @@ main{
         }
         .cabecalho-menu-vertical{
             height: 80px;
-            position: fixed;
+            position: sticky;
             top: 0px;
             width: 100%;
             z-index: 300;
@@ -250,7 +250,7 @@ main{
                 img {
                     object-fit:cover;
                     width: 100%;
-                    margin-top: 120px;
+                    margin-top: 40px;
                     height: 300px;
                 }
             }

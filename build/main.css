@@ -269,7 +269,7 @@ main .menu-vertical h2 {
 }
 main .menu-vertical .cabecalho-menu-vertical {
   height: 80px;
-  position: fixed;
+  position: sticky;
   top: 0px;
   width: 100%;
   z-index: 300;
@@ -281,7 +281,7 @@ main .menu-vertical .imagem-do-produto .slider-for img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  margin-top: 120px;
+  margin-top: 40px;
   height: 300px;
 }
 main .menu-vertical .imagem-do-produto .slider-nav .slick-slide {
