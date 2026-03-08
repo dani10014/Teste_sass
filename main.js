@@ -75,7 +75,7 @@ botoesInspecionar.forEach(botao =>{
                 </div>
             </div>
             ${dados.detalhes ? `<div class="detalhes mt-4">
-                <h1 class="text-center">Detalhes do produto</h1>
+                <h1 class="text-center mb-4">Detalhes do produto</h1>
                 ${dados.detalhes}
             </div>` : ''}
         </div>`;
