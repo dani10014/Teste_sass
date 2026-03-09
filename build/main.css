@@ -40,6 +40,39 @@
     transform: translateX(-100%);
   }
 }
+.lookbook {
+  position: relative;
+}
+.lookbook img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(0.5);
+}
+.lookbook .lookbook-texto {
+  position: absolute;
+  top: 60px;
+  text-align: center;
+  color: #fff;
+}
+.lookbook .lookbook-texto h3 {
+  text-transform: uppercase;
+}
+.lookbook .lookbook-texto h6 {
+  text-transform: uppercase;
+}
+.lookbook .ver-look-botao {
+  border: 2px solid #fff;
+  padding: 5px;
+}
+.lookbook .ver-look-botao button {
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  border: none;
+  color: #fff;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -202,7 +235,6 @@ main #secao-artefatos-roupas .texto-principais-produtos h2 {
   text-transform: uppercase;
   font-size: 1.3rem;
   color: #9b8009;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3843137255);
 }
 main #secao-artefatos-roupas .texto-principais-produtos button {
   border: none;
@@ -219,7 +251,29 @@ main #secao-artefatos-roupas #carouselprodutos {
   touch-action: pan-y;
 }
 main #secao-artefatos-roupas #carouselprodutos .produto {
-  max-height: 300px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+}
+main #secao-artefatos-roupas #carouselprodutos .produto h6 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+main #secao-artefatos-roupas #carouselprodutos .produto .ticket-limitado {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 35px;
+  background-color: #9b8009;
+  color: #fff;
+}
+main #secao-artefatos-roupas #carouselprodutos .produto .ticket-limitado h5 {
+  font-size: 0.7rem;
+  margin-bottom: 0;
+  padding: 5px;
+  height: 100%;
+  text-align: center;
+  text-transform: uppercase;
 }
 main #secao-artefatos-roupas #carouselprodutos img {
   width: 100%;
@@ -227,21 +281,24 @@ main #secao-artefatos-roupas #carouselprodutos img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+main #secao-artefatos-roupas #carouselprodutos .botao-inspecionar {
+  margin-top: auto;
+}
 main #secao-artefatos-roupas #carouselprodutos .botao-inspecionar button {
   font-size: 0.8rem;
   padding: 0.2rem 0.4rem;
   height: 45px;
   text-transform: uppercase;
-  font-family: "EB Garamond", serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
+  font-family: sans-serif;
+  background-color: #9b8009;
+  border: none;
 }
 main #secao-artefatos-roupas #carouselprodutos .botao-inspecionar i {
   font-size: 10px;
 }
 main .produtos-carousel .slick-slide {
   margin: 0 10px;
+  display: flex;
 }
 main .produtos-carousel .slick-list {
   margin: 0 -10px;
