@@ -352,12 +352,19 @@ main{
                     transform: translateY(20%);
                     color: red;
                 }
-            
-        
     }
     &.menu-vertical-ativo{
         display: block;
         transform: translateY(0);
     }
 }
+
+    .texto-lancamentos-recentes{
+        
+        h2{
+            font-size: 1.3rem;
+            color: #9b8009;
+            text-transform: uppercase;
+        }
+    }
 }
