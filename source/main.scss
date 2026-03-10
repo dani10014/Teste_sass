@@ -1,7 +1,7 @@
-@use "_icone-bolsa";
-@use "_carrosel";
-@use "_alertaDesconto";
-@use "_loockback";
+@use "components/loockback";
+@use "components/icone-bolsa";
+@use "components/carrosel";
+@use "components/alertaDesconto";
 
 *{
     padding: 0;
@@ -366,5 +366,27 @@ main{
             color: #9b8009;
             text-transform: uppercase;
         }
+    }
+}
+
+/* Estilos para a página de Favoritos */
+/* Para melhor organização, estes estilos poderiam ser movidos para um novo arquivo, como 'source/_favoritos.scss', e importados no topo deste arquivo com '@use "favoritos";' */
+.produto-favorito {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    img {
+        height: 180px;
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+
+    button.btn-outline-danger {
+        margin-top: auto; /* Empurra o botão de remover para o final do card */
     }
 }

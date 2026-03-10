@@ -102,7 +102,6 @@ menuVertical.addEventListener("click", function(e) {
     }
 });
 menuVertical.addEventListener("click", function(event) {
-    
     const btnFavorito = event.target.closest(".botao-adicionar-favoritos");
 
     if (btnFavorito) {
