@@ -1,7 +1,7 @@
 node_modules
 
 # Pasta de distribuição
-/home/dani/Documentos/EchoModa/dist/js
+dist/js
 
 # Arquivos temporários do sistema ou do VS Code
 .DS_Store
