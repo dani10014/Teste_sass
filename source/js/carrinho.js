@@ -1,14 +1,15 @@
+export function sistemaCarrinho(){
 const botaoVoltarFavorito = document.querySelector(".botao-voltar-favorito");
 const produtosCarrinho = JSON.parse(localStorage.getItem("produtoCarrinho")) || [];
 const corpoCardCarrinho = document.querySelector(".container .row");
 
 
 if (produtosCarrinho.length === 0) {
-    // Definimos a variável e já jogamos no HTML
+
     const msgVazia = "<p class='text-center mt-3' style='text-transform:uppercase'>Você ainda não tem produtos no carrinho</p>";
     corpoCardCarrinho.innerHTML = msgVazia;
 } else {
-    // 2. SÓ RODA O LOOP SE TIVER ITENS:
+    
     produtosCarrinho.forEach(produto => {
         corpoCardCarrinho.innerHTML += criarCardProdutoCarrinho(produto);
     });
@@ -53,3 +54,4 @@ botao.addEventListener("click",function(event){
 });
 }
 atualizarQuantidadeProdutos()
+}

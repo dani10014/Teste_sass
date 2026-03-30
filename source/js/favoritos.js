@@ -1,3 +1,5 @@
+export function sistemaFavoritos(){
+    
 const listaFavoritos = JSON.parse(localStorage.getItem("dados")) || [];
 const botaoVoltarFavorito = document.querySelector(".botao-voltar-favorito");
 const corpoCard = document.querySelector(".container .row"); 
@@ -8,13 +10,13 @@ botaoVoltarFavorito.addEventListener("click",function(){
     window.location.href = "index.html";
 })
 
-// 1. CORREÇÃO DA MENSAGEM:
+
 if (listaFavoritos.length === 0) {
-    // Definimos a variável e já jogamos no HTML
+
     const msgVazia = "<p class='text-center mt-3' style='text-transform:uppercase'>Você ainda não tem favoritos</p>";
     corpoCard.innerHTML = msgVazia;
 } else {
-    // 2. SÓ RODA O LOOP SE TIVER ITENS:
+
     listaFavoritos.forEach(produto => {
         corpoCard.innerHTML += criarCardProduto(produto);
     });
@@ -57,3 +59,4 @@ botao.addEventListener("click",function(event){
 });
 }
 atualizarQuantidadeProdutos()
+}

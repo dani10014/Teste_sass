@@ -1,3 +1,14 @@
+
+import { sistemaFavoritos } from './favoritos.js';
+import { sistemaCarrinho } from './carrinho.js';
+import { sistemaPesquisa } from './btn-pesquisa.js';
+
+if(window.location.pathname.endsWith("favoritos.html")){
+    sistemaFavoritos();
+}
+if(window.location.pathname.endsWith("carrinho.html")){
+    sistemaCarrinho();
+}
 const btnMenuAmburguer = document.querySelector("#menu-amburguer");
 const menuLateral = document.querySelector(".menu-lateral");
 const menuVertical = document.querySelector(".menu-vertical");
@@ -11,42 +22,59 @@ const botaoCarrinho = document.querySelector(".botao-carrinho");
 const dadosProdutoCarrinho = JSON.parse(localStorage.getItem("produtoCarrinho")) || [];
 const botaofavorito = null;
 
+if(btnMenuAmburguer){
+    sistemaPesquisa();
+}
+
 function atualizarQuantidadeProdutos(){
     const produtosExistentes = JSON.parse(localStorage.getItem("dados")) || [];
     const produtosExistentesCarrinho = JSON.parse(localStorage.getItem("produtoCarrinho")) || [];
 
-    if(produtosExistentes.length > 0){
-        botaoContadorfavoritos.style.display = "block";
-    }else{
-        botaoContadorfavoritos.style.display = "none";
+    if (botaoContadorfavoritos) {
+        if(produtosExistentes.length > 0){
+            botaoContadorfavoritos.style.display = "block";
+        } else {
+            botaoContadorfavoritos.style.display = "none";
+        }
     }
-    if(produtosExistentesCarrinho.length > 0){
-        botaoContadorCarrinho.style.display = "block";
-    }else{
-        botaoContadorCarrinho.style.display = "none";
+
+    if (botaoContadorCarrinho) {
+        if(produtosExistentesCarrinho.length > 0){
+            botaoContadorCarrinho.style.display = "block";
+        } else {
+            botaoContadorCarrinho.style.display = "none";
+        }
     }
 }
-atualizarQuantidadeProdutos()
 
-btnMenuAmburguer.addEventListener("click",function(){
-    menuLateral.style.display = "block";
-    document.body.style.overflow = 'hidden';
+atualizarQuantidadeProdutos()
+if(btnMenuAmburguer){
+    btnMenuAmburguer.addEventListener("click",function(){
+        menuLateral.style.display = "block";
+        document.body.style.overflow = 'hidden';
     setTimeout(function(){
         menuLateral.classList.add("menu-ativo");
     },100)
     
-})
-botaoFavoritoMenu.addEventListener("click",function(){
+    })
+}
+if(botaoFavoritoMenu){
+    botaoFavoritoMenu.addEventListener("click",function(){
     window.location.href = "favoritos.html";
-})
-botaoCarrinho.addEventListener("click",function(){
+    })
+}
+if(botaoCarrinho){
+    botaoCarrinho.addEventListener("click",function(){
     window.location.href = "carrinho.html";
-})
+    })
+}
+if(btnFecharMenu){
 btnFecharMenu.addEventListener("click",function(){
     menuLateral.classList.remove("menu-ativo");
     document.body.style.overflow = 'auto'; 
 })
-
+}
+if(botoesInspecionar){
 botoesInspecionar.forEach(botao =>{
     botao.addEventListener("click",function(){
         const colunaProduto = botao.closest(".produto");
@@ -116,7 +144,8 @@ botoesInspecionar.forEach(botao =>{
         },100)
     })
 })
-
+}
+if(menuVertical){
 menuVertical.addEventListener("click", function(e) {
     if (e.target.classList.contains("botao-voltar")) {
 
@@ -125,14 +154,13 @@ menuVertical.addEventListener("click", function(e) {
         setTimeout(function(){
             menuVertical.style.display = "none";
             document.querySelector(".faixa-alerta").style.top = "60px"
+            document.querySelector("body").style.marginTop = "99px";
         }, 500)
     }
 });
 menuVertical.addEventListener("click", function(event) {
     const btnFavorito = event.target.closest(".botao-adicionar-favoritos");
 
-    // 1. Verificamos se clicamos no botão de coração (evita bugar com o botão de detalhes)
-   // ... dentro do menuVertical.addEventListener("click" ...
 if (btnFavorito && btnFavorito.querySelector(".fa-heart")) {
     const icone = btnFavorito.querySelector("i");
     const texto = btnFavorito.querySelector("p");
@@ -140,13 +168,13 @@ if (btnFavorito && btnFavorito.querySelector(".fa-heart")) {
     icone.classList.toggle("fa-solid");
     icone.classList.toggle("fa-regular");
 
-    // Pegamos o nome EXATO do produto que está aberto no menu
+    // Nome exato do produto que abri no menu vertical
     const nomeAtual = menuVertical.querySelector(".nome-produto").innerText.trim();
     
     let listaFavoritos = JSON.parse(localStorage.getItem("dados")) || [];
 
     if (icone.classList.contains("fa-solid")) {
-        // ADICIONAR
+
         icone.style.color = "red";
         texto.innerText = "Remover dos favoritos";;
         
@@ -156,24 +184,24 @@ if (btnFavorito && btnFavorito.querySelector(".fa-heart")) {
             valor: menuVertical.querySelector(".valor-produto").innerText
         };
         
-        // Evita duplicar se o cara clicar mil vezes
+
         const jaExiste = listaFavoritos.some(p => p.nome === nomeAtual);
         if(!jaExiste) {
             listaFavoritos.push(novoProduto);
         }
     } else {
-        // REMOVER (Onde estava o problema)
+
         icone.style.color = "";
         texto.innerText = "Adicionar aos favoritos";
         
-        // Filtra a lista: mantém tudo que NÃO for o nome atual
+
         listaFavoritos = listaFavoritos.filter(p => p.nome.trim() !== nomeAtual);
     }
 
-    // SALVA A LISTA LIMPA
+
     localStorage.setItem("dados", JSON.stringify(listaFavoritos));
     
-    // ATUALIZA A BOLINHA NO TOPO NA HORA
+
     atualizarQuantidadeProdutos();
 }
 });
@@ -204,8 +232,10 @@ menuVertical.addEventListener("click", function(event) {
         
     };
 })
-
+}
 $(document).ready(function(){
+if($('#carouselprodutos') && $('#carouselprodutos') && $('.popup-link')){
+
     $('#carouselprodutos').slick({
         slidesToShow: 2.5,
         slidesToScroll: 1,
@@ -233,5 +263,6 @@ $(document).ready(function(){
                 return 'Echo Moda - Coleção Exclusiva';
             }
         }
-    });
+    })
+    }
 });

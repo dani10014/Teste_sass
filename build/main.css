@@ -194,6 +194,9 @@ header .container .container-pesquisa-e-favoritos {
 header .container .container-pesquisa-e-favoritos i {
   cursor: pointer;
 }
+header .container .container-pesquisa-e-favoritos i:hover {
+  color: #9b8009;
+}
 
 body {
   background-color: rgba(190, 176, 176, 0.5);

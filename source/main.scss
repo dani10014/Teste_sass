@@ -30,6 +30,9 @@ header{
             font-size: 20px;
             i{
                 cursor:pointer;
+                &:hover{
+                    color: #9b8009;
+                }
             }
         }
     }
