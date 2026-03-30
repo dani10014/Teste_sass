@@ -1,6 +1,5 @@
 const gulp = require('gulp');
 const uglify = require('gulp-uglify');
-const obfuscate = require('gulp-javascript-obfuscator');
 
 function compilaJs(){
     return gulp.src('source/js/**/*.js')

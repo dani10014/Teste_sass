@@ -116,7 +116,7 @@ botoesInspecionar.forEach(botao =>{
         corpoMenuVertical.innerHTML = `<div class="container">
             <h3 class="mb-3 mt-3 nome-produto">${dados.nomeProduto}</h3>
             <h4 class="text-center mb-3 valor-produto">${dados.valor}</h4>
-            <button class="btn btn-dark botao-adicionar-carrinho">+ Adicionar ao carrinho</button>
+            <button class="btn btn-dark botao-adicionar-carrinho">Adicionar à Sacola</button>
             <div class="container-favoritos-e-detalhes d-flex d-flex justify-content-between">
                 <div class="botao-adicionar-favoritos d-flex justify-content-center align-items-center gap-2">
                     <i class="fa-regular fa-heart"></i>
