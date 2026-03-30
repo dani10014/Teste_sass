@@ -1,17 +1,29 @@
-#Echo moda
-                                                      
-Arquitetura, Performance e Segurança: A evolução da Echo Moda 🚀
+# 🏛️ Echo Moda - E-commerce de Luxo
 
-Hoje finalizei uma etapa crucial na profissionalização do meu e-commerce. Não se trata apenas de funcionalidades, mas de como o projeto é construído e entregue. Tirei o projeto do rascunho e apliquei um workflow real de mercado:
+Projeto de e-commerce desenvolvido como parte do curso **Full Stack Java na EBAC**. A **Echo Moda** foca em uma experiência de usuário fluida, com uma arquitetura de código moderna e automatizada.
 
-📂 Arquitetura Source/Dist: Separação clara entre o ambiente de desenvolvimento e o código final de produção. Organização é a base de tudo.
+## 🚀 Tecnologias e Ferramentas
 
-⚙️ Automação com Gulp: Implementei um workflow que monitora cada alteração nos arquivos (watchFiles). O Gulp agora orquestra a compilação do Sass e o tratamento de todo o JavaScript de forma automática.
+Este projeto utiliza um workflow profissional para garantir performance e segurança:
 
-🧩 Modularização (ES6 Imports): O projeto agora respira! Dividi a lógica em módulos independentes (favoritos.js, carrinho.js, btn-pesquisa.js). Isso garante um código muito mais limpo, fácil de dar manutenção e sem conflitos de variáveis.
+* **Frontend:** HTML5, CSS3 (Sass) e JavaScript (ES6+).
+* **Automação:** [Gulp](https://gulpjs.com/) para orquestrar tarefas.
+* **Estilização:** Sass modularizado para um CSS mais limpo e manutenível.
+* **Performance:** Minificação de arquivos JS via `gulp-uglify`.
+* **Segurança:** Ofuscação de código com `javascript-obfuscator` para proteção da lógica de negócio.
+* **Módulos:** Sistema de `import/export` para organização de funcionalidades (Carrinho, Favoritos, Pesquisa).
 
-🛡️ Segurança com Obfuscation: Além da minificação para performance, adicionei uma camada de ofuscação de código. Isso protege a propriedade intelectual do projeto, transformando a lógica em algo seguro e de difícil engenharia reversa.
+## 📁 Estrutura do Projeto
 
-✅ Console 100% Clean: Apliquei programação defensiva para garantir que o navegador não exiba erros de referência, independentemente da página acessada.
+* `/source`: Código fonte original, organizado e comentado.
+* `/dist`: Código otimizado, minificado e ofuscado pronto para produção (ignorado pelo Git para manter o repositório limpo).
+* `gulpfile.js`: Configurações de automação do projeto.
 
-Seguimos evoluindo no curso de Full Stack Java na EBAC, sempre focando no que o mercado realmente exige: código limpo, seguro e bem estruturado.
+## 🛠️ Como rodar o projeto localmente
+
+1. Clone o repositório: `git clone https://github.com/dani10014/Projeto_Echo_Moda.git`
+2. Instale as dependências: `npm install`
+3. Inicie o Gulp: `npm run gulp`
+
+---
+Desenvolvido por **Dijalma Duarte (Daniel)**.
