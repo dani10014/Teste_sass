@@ -19,7 +19,7 @@ Este projeto utiliza um workflow profissional para garantir performance e segura
 ## 📁 Estrutura do Projeto
 
 * `/source`: Código fonte original, organizado e comentado.
-* `/dist`: Código otimizado, minificado e ofuscado pronto para produção (ignorado pelo Git para manter o repositório limpo).
+* `/dist`: Código otimizado, minificado e ofuscado pronto para produção (Foi feito o upload por motivos de problemas com vercel).
 * `gulpfile.js`: Configurações de automação do projeto.
 
 ## 🛠️ Como rodar o projeto localmente
